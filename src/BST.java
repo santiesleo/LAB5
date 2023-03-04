@@ -1,21 +1,6 @@
 public class BST {
     private Node root;
 
-
-    public int maxDepth(){
-        return maxDepth(root, 0);
-    }
-
-    private int maxDepth(Node node, int depth) {
-        if (node == null) {
-            return depth;
-        } else {
-            int leftDepth = maxDepth(node.getLeft(), depth + 1);
-            int rightDepth = maxDepth(node.getRight(), depth + 1);
-            return Math.max(leftDepth, rightDepth);
-        }
-    }
-
     public void add(Node node){
         if(root==null){
             root=node;
